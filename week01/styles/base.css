@@ -76,17 +76,17 @@ header nav a:hover {
 main {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    align-items: center;
     gap: 20px;
 
     width: 90%;
-    flex: 1;
+    flex:1;
     margin: 2rem auto;
 }
 
 main h1 {
     grid-column: 1 / 3;
     text-align: center;
+    margin-top: 50px;
     color: #36454f;
 }
 
@@ -169,7 +169,23 @@ main h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+
+    width: 60%;
+    height: 80%;
+    margin: 10px auto;
+    gap: 20px;
+}
+
+.card-links li{
+    text-align: left;
+}
+
+.card-links a{
+    text-align: left;
+}
+
+.card-links a:hover {
+    text-decoration: underline;
 }
 
 /* FOOTER */
