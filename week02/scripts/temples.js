@@ -6,6 +6,12 @@ const menu = document.querySelector("#menu");
 // Add an Event to the button when it's clicked
 button.addEventListener("click", function(){
     menu.classList.toggle("open");
+    
+    if (menu.classList.contains("open")) {
+        button.textContent = "✖";
+    } else {
+        button.textContent = "☰";
+    }
 })
 
 // Get current year

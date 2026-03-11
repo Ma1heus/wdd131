@@ -1,16 +1,14 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
-body,
 html {
-    display: flex;
-    flex-direction: column;
+
     min-height: 100vh;
 }
-
 
 /* HEADER */
 
@@ -20,23 +18,23 @@ header {
     justify-content: space-between;
 
     width: 100%;
-    height: 10vh;
+    padding: 0.5rem 0;
     background-color: #016C99;
     font-family: 'Quicksand', sans-serif;
 }
 
 header p {
-    margin: 0 3rem;
-    font-size: 7vw;
+    margin: 0 2rem;
+    font-size: 1.7rem;
     font-weight: bold;
     color: #ffffff;
 }
 
 button {
     position: relative;
-    z-index: 1;
+    z-index: 3;
     margin-right: 2.5rem;
-    font-size: 10vw;
+    font-size: 3rem;
     border: 0;
 
     color: #FFFFFF;
@@ -46,19 +44,14 @@ button {
 
 #menu {
     position: absolute;
-    overflow: hidden;
-    
-    top: 100%;
+    display: none;
+    top:0;
     width: 100%;
-    left: 0;
-    transition: max-height 0.3s ease;
-    transform: translateY(-100%);
-    background-color: #F2F2F2;
 }
 
 #menu.open {
-    
-    background-color: #F2F2F2;
+    display: block;
+    background-color: #034e6e;
 }
 
 header nav{
@@ -75,14 +68,17 @@ header nav ul {
 }
 
 header nav ul a {
-    color: #010001;
+    font-size: 1.4rem;
+    color: #FFFFFF;
     text-decoration: none;
+    cursor: default;
 }
 
 header nav ul li{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 4rem;
 
     width: 100%;
 }
@@ -94,11 +90,41 @@ header nav li:hover{
 
 /* MAIN */
 
-figure img {
-    height: 100px;
+main{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
+main h1{
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem auto;
+}
 
+main section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+figure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+figure figcaption{
+    font-size: 1.5rem;
+    color: #034e6e;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
 
 /* FOOTER */
 
@@ -106,6 +132,7 @@ footer {
     background-color: #016C99;
     text-align: center;
     padding: 1rem 0;
+    margin: 1.5rem 0 0 0;
     width: 100%;
 }
 
