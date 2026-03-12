@@ -9,13 +9,17 @@
         display: none;
     }
 
+    header{
+        color: #ffffff;
+    }
+
     header nav ul{
         flex-direction: row;
         justify-content: space-around;
     }
 
     header nav ul li:hover{
-        background-color:rgb(45, 168, 168);
+        background-color:#034e6e;
         transition: 0.3s;
     }
 

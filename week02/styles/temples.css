@@ -7,6 +7,8 @@
 
 body {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* HEADER */
@@ -19,6 +21,7 @@ header {
     width: 100%;
     padding: 0.5rem 0;
     background-color: #016C99;
+    color: #ffffff;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -79,7 +82,7 @@ header nav ul li{
 }
 
 header nav li:hover{
-    background-color: #016C99;
+    background-color: #034e6e;
     transition: transform 0.3s ease;
 }
 
