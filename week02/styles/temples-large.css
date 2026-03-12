@@ -1,0 +1,22 @@
+@media (min-width: 768px) {
+    #menu{
+        position: static;
+        display: block;
+        width: 60%;
+    }
+    
+    #menu-button{
+        display: none;
+    }
+
+    header nav ul{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    main section{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3rem;
+    }
+
+}
