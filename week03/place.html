@@ -8,8 +8,8 @@
         content="WDD 131 – ">
     <meta name="author" content="Matheus Luz Rodrigues">
     
-    <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
     
     <!-- Google Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,17 +18,19 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <script src="scripts/temples.js" defer></script>
+    <script src="scripts/place.js" defer></script>
     
     <title>WDD 131 – Assignment: Country Page</title>
 </head>
 <body>
     <header>
-        <h1>Japão</h1>
+        <h1>Japan</h1>
     </header>
     <main>
-        <figure></figure>
-        <section>
+        <figure>
+            <img src="images/japanese-temple.jpg" alt="">
+        </figure>
+        <section class="info-place">
             <h2>Data</h2>
             <ul>
                 <li>
@@ -67,22 +69,23 @@
         </section>
         <section>
             <h2>Weather</h2>
+            <img src="" alt="" id="weathericon">
             <ul>
                 <li>
-                    <p></p>
-                    <p></p>
+                    <p>Temperature:</p>
+                    <p id="temperature"></p>
                 </li>
                 <li>
-                    <p></p>
-                    <p></p>
+                    <p>Conditions:</p>
+                    <p id="conditions"></p>
                 </li>
                 <li>
-                    <p></p>
-                    <p></p>
+                    <p>Wind:</p>
+                    <p id="wind"></p>
                 </li>
                 <li>
-                    <p></p>
-                    <p></p>
+                    <p>Wind Chill:</p>
+                    <p id="wind-chill"></p>
                 </li>
             </ul>
         </section>
