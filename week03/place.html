@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="description"
-        content="WDD 131 – ">
+
+    <meta name="description" content="WDD 131 – ">
     <meta name="author" content="Matheus Luz Rodrigues">
-    
+
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css">
-    
-    <!-- Google Fonts Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <script src="scripts/place.js" defer></script>
-    
+
     <title>WDD 131 – Assignment: Country Page</title>
 </head>
+
 <body>
     <header>
         <h1>Japan</h1>
     </header>
     <main>
-        <figure>
-            <img src="images/japanese-temple.jpg" alt="">
-        </figure>
+        <picture>
+            <!-- Desktop -->
+            <source srcset="images/japanese-temple-large.webp" media="(min-width: 768px)">
+        
+            <!-- Tablet -->
+            <source srcset="images/japanese-temple.webp" media="(min-width: 480px)">
+        
+            <!-- Mobile -->
+            <img src="images/small-temple.webp" alt="Japanese temple with mountain">
+        </picture>
         <section class="info-place">
             <h2>Data</h2>
             <ul>
@@ -67,9 +68,9 @@
                 </li>
             </ul>
         </section>
-        <section>
+        <section class="weather-info">
             <h2>Weather</h2>
-            <img src="" alt="" id="weathericon">
+            <img src="images/partly-cloudy-day.svg" alt="An image about a partly cloudy day">
             <ul>
                 <li>
                     <p>Temperature:</p>
@@ -98,4 +99,5 @@
         <p id="lastModified"></p>
     </footer>
 </body>
+
 </html>

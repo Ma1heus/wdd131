@@ -1,49 +1,114 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-:root{
-    --backgroundcolor: #014764;
-    --titlecolor: #ffffff;
+:root {
+    --maincolor: #014764;
+    --secondcolor: #ffffff;
+    --thirdcolor: rgb(191, 218, 192);
 }
 
-header{
+html {
+    width: 100%;
+}
+
+header {
     display: flex;
     align-items: center;
     justify-content: center;
 
     height: 20vh;
+    width: 100%;
+
     font-size: 4vw;
-    border-bottom: 1.5rem solid rgb(191, 218, 192);
-    background-color: var(--backgroundcolor);
-    color: var(--titlecolor);
+    border-bottom: 1.5rem solid var(--thirdcolor);
+    background-color: var(--maincolor);
+    color: var(--secondcolor);
 }
 
-main{
-    height: 100vh;
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
     flex: 1;
 }
 
-figure img{
+picture{
     width: 100%;
-    height: 80vh;
 }
 
+picture img, source{
+    height:80vh;
+    width: 100%;
+}
 
+.info-place,
+.weather-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 
+    width: 100%;
+    padding: 40px;
+    border-bottom: 1px solid #f8f5f5;
+}
+
+.info-place h2,
+.weather-info h2 {
+    font-size: 4vh;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.info-place ul,
+.weather-info ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    list-style: none;
+}
+
+.info-place ul li,
+.weather-info ul li {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+}
+
+.info-place ul li p:first-child,
+.weather-info ul li p:first-child {
+    font-weight: bold;
+    width: 150px;
+    text-align: right;
+}
+
+.info-place ul li p:last-child,
+.weather-info ul li p:last-child {
+    width: 150px;
+    text-align: left;
+}
+
+.weather-info img{
+    margin-bottom:20px;
+    height: 15vh;
+}
 
 /* FOOTER */
 
 footer {
-    background-color: var(--backgroundcolor);
+    background-color: var(--maincolor);
     text-align: center;
     padding: 1rem 0;
-    margin: 1.5rem 0 0 0;
     width: 100%;
-    color: #ffffff;
+    color: var(--secondcolor);
 }
 
 footer p {
