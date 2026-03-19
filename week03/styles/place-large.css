@@ -1,0 +1,59 @@
+@media (min-width: 768px) {
+    body{
+        width: 100;
+    }
+    
+    main {
+        height: calc(100vh - 15vh);
+        position: relative;
+    }
+
+    .info-place {
+        position: absolute;
+        top: 30%;
+        right: 78%;
+        width: 350px;
+        border: 0;
+
+        background-color: var(--secondcolor);
+        opacity: 80%;
+    }
+
+    .info-place h2 {
+        padding: 30px 120px;
+        margin: 0 120px 20px 0;
+
+        background-color: var(--thirdcolor);
+    }
+
+    .weather-info {
+        position: absolute;
+        top: 55%;
+        left: 78%;
+        width: 320px;
+        border: 0;
+
+
+        background-color: var(--secondcolor);
+        opacity: 80%;
+    }
+
+    .weather-info h2 {
+        display: flex;
+        position: relative;
+        background-color: var(--thirdcolor);
+
+        padding: 30px 50px;
+        margin-right: 150px;
+    }
+
+    .weather-info h2::after {
+        content: "⛅";
+        margin-left: 10px;
+    }
+
+    .weather-info img {
+        display: none;
+    }
+
+}

@@ -7,6 +7,8 @@ document.getElementById("currentyear").textContent = currentYear;
 // Get last modified date
 document.getElementById("lastModified").textContent = "Last Modification: " + document.lastModified;
 
+
+// Get the temperature
 const temperature = 10;
 const windSpeed = 5;
 
@@ -16,9 +18,8 @@ document.getElementById("conditions").textContent = "Partly Cloudy";
 
 function calculateWindChill(temp, wind) {
     return (
-        13.12 +
-        0.6215 * temp -
-        11.37 * Math.pow(wind, 0.16) +
+        13.12 + 0.6215 * temp
+        - 11.37 * Math.pow(wind, 0.16) +
         0.3965 * temp * Math.pow(wind, 0.16)
     ).toFixed(1);
 }

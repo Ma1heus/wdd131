@@ -20,13 +20,16 @@ header {
     align-items: center;
     justify-content: center;
 
-    height: 20vh;
+    height: 15vh;
     width: 100%;
 
-    font-size: 4vw;
-    border-bottom: 1.5rem solid var(--thirdcolor);
+    border-bottom: 1rem solid var(--thirdcolor);
     background-color: var(--maincolor);
     color: var(--secondcolor);
+}
+
+h1{
+    font-size: 4vh;
 }
 
 main {
@@ -34,17 +37,17 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-    flex: 1;
 }
 
 picture{
     width: 100%;
 }
 
-picture img, source{
-    height:80vh;
+picture img {
     width: 100%;
+    height: calc(100dvh - 15vh);
+    object-fit: cover;
+    display: block;
 }
 
 .info-place,
