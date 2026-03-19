@@ -1,8 +1,14 @@
 @media (min-width: 768px) {
-    body{
-        width: 100;
+    :root {
+        --maincolor: #014764;
+        --secondcolor: #ffffff;
+        --thirdcolor: rgb(191, 218, 192);
     }
-    
+
+    body {
+        width: 100%;
+    }
+
     main {
         height: calc(100vh - 15vh);
         position: relative;
