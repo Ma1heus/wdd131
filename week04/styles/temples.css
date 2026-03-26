@@ -107,6 +107,24 @@ main section{
     gap: 2rem;
 }
 
+figure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+figure figcaption{
+    font-size: 1.3rem;
+    color: #034e6e;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
 /* FOOTER */
 
 footer {
