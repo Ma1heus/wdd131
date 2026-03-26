@@ -1,0 +1,49 @@
+@media (min-width: 768px) {
+    #menu {
+        position: static;
+        display: block;
+        width: 60%;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    header {
+        color: #ffffff;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    header nav ul li:hover {
+        background-color: #034e6e;
+        transition: 0.3s;
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    main div {
+        gap: 1rem;
+    }
+
+}
+
+@media (min-width: 900px) {
+    .res-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1400px) {
+    .res-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
