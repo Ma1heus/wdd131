@@ -4,9 +4,9 @@ const button = document.querySelector("#menu-button");
 const menu = document.querySelector("#menu");
 
 // Add an Event to the button when it's clicked
-button.addEventListener("click", function(){
+button.addEventListener("click", function () {
     menu.classList.toggle("open");
-    
+
     if (menu.classList.contains("open")) {
         button.textContent = "✖";
     } else {
@@ -101,13 +101,44 @@ const temples = [
         templeName: "Rio de Janeiro Brazil Temple",
         location: "Rio de Janeiro, Brazil",
         dedicated: "2022, May, 8",
-        area:29966,
+        area: 29966,
         imageUrl:
             "https://churchofjesuschristtemples.org/assets/img/temples/rio-de-janeiro-brazil-temple/rio-de-janeiro-brazil-temple-55727-thumb.jpg"
     }
 ];
 
-const nonutahTemples = temples.filter(temple => !temple.location.includes("Utah"));
+document.querySelector("#home").addEventListener("click", (e) => {
+    e.preventDefault();
+    createTempleCard(temples);
+});
+
+document.querySelector("#old").addEventListener("click", (e) => {
+    e.preventDefault();
+    const oldTemples = temples.filter(t => {
+        return parseInt(t.dedicated) < 1900;
+    });
+    createTempleCard(oldTemples);
+});
+
+document.querySelector("#new").addEventListener("click", (e) => {
+    e.preventDefault();
+    const newTemples = temples.filter(t => {
+        return parseInt(t.dedicated) > 2000;
+    });
+    createTempleCard(newTemples);
+});
+
+document.querySelector("#large").addEventListener("click", (e) => {
+    e.preventDefault();
+    const largeTemples = temples.filter(t => t.area > 90000);
+    createTempleCard(largeTemples);
+});
+
+document.querySelector("#small").addEventListener("click", (e) => {
+    e.preventDefault();
+    const smallTemples = temples.filter(t => t.area < 10000);
+    createTempleCard(smallTemples);
+});
 
 createTempleCard(temples);
 
