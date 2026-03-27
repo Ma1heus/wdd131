@@ -81,12 +81,38 @@ const temples = [
         imageUrl:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
-    // Add more temple objects here...
+    {
+        templeName: "Curitiba Brazil Temple",
+        location: "Curitiba, Brazil",
+        dedicated: "2008, June, 1",
+        area: 27850,
+        imageUrl:
+            "https://churchofjesuschristtemples.org/assets/img/temples/curitiba-brazil-temple/curitiba-brazil-temple-18837-thumb.jpg"
+    },
+    {
+        templeName: "São Paulo Brazil Temple",
+        location: "São Paulo, Brazil",
+        dedicated: "1978, 30 October – 2 November",
+        area: 59246,
+        imageUrl:
+            "https://churchofjesuschristtemples.org/assets/img/temples/sao-paulo-brazil-temple/sao-paulo-brazil-temple-9671-thumb.jpg"
+    },
+    {
+        templeName: "Rio de Janeiro Brazil Temple",
+        location: "Rio de Janeiro, Brazil",
+        dedicated: "2022, May, 8",
+        area:29966,
+        imageUrl:
+            "https://churchofjesuschristtemples.org/assets/img/temples/rio-de-janeiro-brazil-temple/rio-de-janeiro-brazil-temple-55727-thumb.jpg"
+    }
 ];
+
+const nonutahTemples = temples.filter(temple => !temple.location.includes("Utah"));
 
 createTempleCard(temples);
 
 function createTempleCard(filteredTemples) {
+    document.querySelector(".res-grid").innerHTML = "";
     filteredTemples.forEach(temple => {
         let card = document.createElement("section");
         let name = document.createElement("h3");
