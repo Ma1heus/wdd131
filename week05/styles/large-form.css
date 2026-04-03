@@ -1,0 +1,28 @@
+@media (min-width: 768px) {
+    .form-columns {
+        display: flex;
+        max-height: 60vh;
+        min-width: 70vh;
+        gap: 80px;
+    }
+
+    .left-column,
+    .right-column {
+        flex: 1;
+    }
+
+    .features{
+        margin-top:2vh;
+    }
+
+    textarea {
+        width: 100%;
+        min-height: 150px;
+    }
+
+    input[type="submit"] {
+        display: block;
+        margin: 30px auto;
+        width: 50%;
+    }
+}
