@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+
+:root{
+    --primary-color: #6204BF;
+    --secondary-color: #0339A6;
+    --tertiary-color: #21D904;
+    --quaternary-color: #2CBF42;
+    --null-color: #F2F2F2;
+
+    --main-font: 'Montserrat', sans-serif;
+    --secondary-font:'Quicksand', sans-serif;
+}
