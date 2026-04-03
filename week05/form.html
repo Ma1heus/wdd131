@@ -1,37 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description"
         content="WDD 131 – Dynamic Web Fundamentals course Form page, where I created a form to ask the user to input some information.">
     <meta name="author" content="Matheus Luz Rodrigues">
-    
 
-    <!-- Styles -->
     <link rel="stylesheet" href="styles/form.css">
-    <link rel="stylesheet" href="styles/filtered-form.css">
-    
-    <!-- Google Fonts Preconnect -->
+    <link rel="stylesheet" href="styles/large-form.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-    <!-- Script -->
     <script src="scripts/form.js" defer></script>
 
-    <title>Document</title>
+    <title>Product Review</title>
 </head>
+
 <body>
     <header>
         <h1>Product Review</h1>
     </header>
 
-    <main></main>
+    <main>
+        <form method="get" action="review.html" class="review-form">
+
+            <!-- Product Name -->
+            <div class="product-name">
+                <label for="product">Product Name</label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>
+            </div>
+
+            <!-- Rating -->
+            <div class="overall-rating">
+                <label>Overall Rating</label>
+                <div class="rating">
+
+                    <label for="rate1"><input type="radio" id="rate1" name="rating" value="1" required>
+                        ☆</label>
+
+                    <label for="rate2"><input type="radio" id="rate2" name="rating" value="2">
+                        ☆☆</label>
+
+                    <label for="rate3"><input type="radio" id="rate3" name="rating" value="3">
+                        ☆☆☆</label>
+
+                    <label for="rate4">
+                        <input type="radio" id="rate4" name="rating" value="4">
+                        ☆☆☆☆</label>
+
+                    <label for="rate5">
+                        <input type="radio" id="rate5" name="rating" value="5">
+                        ☆☆☆☆☆</label>
+                </div>
+            </div>
+
+            <!-- Date -->
+            <div class="date">
+                <label for="date">Date of Installation</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <!-- Features -->
+            <div class="features">
+                <label>Which features did you find useful in the product?</label>
+                <p class="hint">Check all that apply</p>
+
+                <div class="choose-option">
+                    <div>
+                        <label for="durability">
+                            <input type="checkbox" id="durability" name="features[]" value="durability">
+                            Durability</label>
+                    </div>
+
+                    <div>
+                        <label for="ease">
+                            <input type="checkbox" id="ease" name="features[]" value="ease">
+                            Ease of Use</label>
+                    </div>
+
+                    <div>
+                        <label for="performance">
+                            <input type="checkbox" id="performance" name="features[]" value="performance">
+                            Performance</label>
+                    </div>
+
+                    <div>
+                        <label for="design">
+                            <input type="checkbox" id="design" name="features[]" value="design">
+                            Design</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review -->
+            <div class="review">
+                <label for="review">Written Review <span>(Optional)</span></label>
+                <textarea id="review" name="review"></textarea>
+            </div>
+
+            <!-- Review Name -->
+            <div class="review-name">
+                <label for="name">Your Name <span>(Optional)</span></label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <input type="submit" value="Post Review">
+
+        </form>
+    </main>
 
     <footer>
         <p>&copy;
@@ -41,4 +124,5 @@
         <p id="lastModified"></p>
     </footer>
 </body>
+
 </html>
