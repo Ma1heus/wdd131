@@ -7,14 +7,13 @@
 :root {
     --primary-color: #6204BF;
     --secondary-color: #ffffff;
-    --tertiary-color: #5fa3c0;
 
     --main-font-family: 'Montserrat', sans-serif;
 }
 
 /* Body */
 body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: var(--main-font-family);
     background: #F2F2F2;
     display: flex;
     flex-direction: column;
@@ -92,6 +91,4 @@ footer {
 footer p {
     font-size: 18px;
     margin: 10px;
-
-    font-family: var(--main-font-family);
 }
