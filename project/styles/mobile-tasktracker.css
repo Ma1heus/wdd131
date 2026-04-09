@@ -4,90 +4,80 @@
     box-sizing: border-box;
 }
 
-/* Variables */
-
-:root{
+:root {
     --primary-color: #6204BF;
-    --secondary-color: #0339A6;
-    --tertiary-color: #21D904;
-    --quaternary-color: #2CBF42;
-    --null-color: #F2F2F2;
+    --secondary-color: #ffffff;
+    --tertiary-color: #5fa3c0;
 
-    --main-font: 'Montserrat', sans-serif;
-    --secondary-font:'Quicksand', sans-serif;
+    --main-font-family: 'Montserrat', sans-serif;
 }
 
 /* Body */
-
-body{
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: #F2F2F2;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    gap: 2vh;
-    height: 100vh;
+    align-items: center;
+    min-height: 100vh;
 }
 
 /* Header */
-
-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+header {
+    background: var(--primary-color);
+    color: white;
     width: 100%;
-    height: 7vh;
-    padding: 1rem 0;
-    color: var(--null-color);
-    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
 }
 
 /* Main */
-
-main{
+main {
+    margin-top: 20px;
+    width: 90%;
+    max-width: 500px;
+    height: 100%;
     flex:1;
 }
 
-.explain{
-    border: 1px solid var(--quaternary-color);
-}
-
-section{
+/* Tasks */
+.task-input {
     display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 10px;
+}
+
+button {
+    background: #0339A6;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.task-list ul {
+    list-style: none;
+}
+
+.task-list li {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    gap: 1vh;
-    padding: 2vh;
-    text-align: center;
 }
 
-section h2{
-    width: 100%;
-    padding: 2vh;
-
-    text-align: center;
-    color: var(--null-color);
-    background-color: var(--secondary-color);
+/* Finished task */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
 }
-
-section p{
-    text-align: center;
-    font-family: var(--secondary-font);
-}
-
-section ul{
-    padding: 0;
-    margin: 0;
-
-    text-align: center;
-    list-style-type: none;
-    font-family: var(--main-font);
-}
-
-
-
-/* FOOTER */
 
 footer {
     padding: 1rem 0;
@@ -95,8 +85,8 @@ footer {
     margin: 1.5rem 0 0 0;
 
     text-align: center;
-    color: var(--null-color);
-    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 
 footer p {
