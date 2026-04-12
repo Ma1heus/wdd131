@@ -1,0 +1,110 @@
+/* TABLETS (≥ 600px) */
+@media (min-width: 600px) {
+    main {
+        max-width: 600px;
+        margin: 30px auto;
+    }
+
+    #taskInput {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .task-list li {
+        padding: 12px;
+    }
+}
+
+
+/* DESKTOP (≥ 768px) */
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 9vh;
+    }
+
+    header h1 {
+        font-size: 4vh;
+    }
+
+    main {
+        max-width: 700px;
+        margin: 40px auto;
+    }
+
+    .task-input {
+        margin-top: 4vh;
+        height: 8vh;
+        gap: 15px;
+    }
+
+    #taskInput {
+        font-size: 2vh;
+    }
+
+    button {
+        font-size: 2vh;
+        width: 8vh;
+    }
+
+    button:hover {
+        background: #021f73;
+        transition: 0.2s;
+    }
+
+    .task-list li:hover {
+        transform: scale(1.02);
+        transition: 0.2s;
+        cursor: pointer;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 10vh;
+    }
+
+    footer .name-footer {
+        font-size: 2vh;
+    }
+
+    footer #lastModified {
+        font-size: 2vh;
+    }
+}
+
+
+/* LARGE SCREENS (≥ 1024px) */
+@media (min-width: 1024px) {
+    main {
+        max-width: 800px;
+
+    }
+
+    .task-list li {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+
+    button {
+        padding: 14px 18px;
+        font-size: 1.05rem;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 15vh;
+    }
+}

@@ -6,40 +6,53 @@
 
 :root {
     --primary-color: #6204BF;
-    --secondary-color: #ffffff;
+    --secondary-color: #0339A6;
+
+    --background-color: #F2F2F2;
+    --surface-color: #ffffff;
+
+    --text-color: #222222;
+    --text-light: #ffffff;
+
+    --completed-opacity: 0.6;
 
     --main-font-family: 'Montserrat', sans-serif;
+
+    --padding-small: 10px;
+    --padding-medium: 1rem;
 }
 
-/* Body */
+/* BODY */
 body {
     font-family: var(--main-font-family);
-    background: #F2F2F2;
+    background: var(--background-color);
+    color: var(--text-color);
+
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
 }
 
-/* Header */
+/* HEADER */
 header {
     background: var(--primary-color);
-    color: white;
+    color: var(--text-light);
+
     width: 100%;
     text-align: center;
-    padding: 1rem;
+    padding: var(--padding-medium);
 }
 
-/* Main */
+/* MAIN */
 main {
     margin-top: 20px;
     width: 90%;
     max-width: 500px;
-    height: 100%;
-    flex:1;
+    flex: 1;
 }
 
-/* Tasks */
+/* TASK INPUT */
 .task-input {
     display: flex;
     gap: 10px;
@@ -48,43 +61,50 @@ main {
 
 #taskInput {
     flex: 1;
-    padding: 10px;
+    padding: var(--padding-small);
+    border: 1px solid #ccc;
 }
 
+/* BUTTON */
 button {
-    background: #0339A6;
-    color: white;
+    background: var(--secondary-color);
+    color: var(--text-light);
+
     border: none;
-    padding: 10px;
+    padding: var(--padding-small);
     cursor: pointer;
 }
 
+/* TASK LIST */
 .task-list ul {
     list-style: none;
 }
 
 .task-list li {
-    background: white;
-    padding: 10px;
+    background: var(--surface-color);
+
+    padding: var(--padding-small);
     margin-bottom: 10px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Finished task */
+/* COMPLETED TASK */
 .completed {
     text-decoration: line-through;
-    opacity: 0.6;
+    opacity: var(--completed-opacity);
 }
 
+/* FOOTER */
 footer {
-    padding: 1rem 0;
+    padding: var(--padding-medium) 0;
     width: 100%;
-    margin: 1.5rem 0 0 0;
+    margin-top: 1.5rem;
 
     text-align: center;
-    color: var(--secondary-color);
+    color: var(--text-light);
     background-color: var(--primary-color);
 }
 
