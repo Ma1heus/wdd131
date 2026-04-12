@@ -1,3 +1,4 @@
+// ===== Footer =====
 // Get current year
 const currentYear = new Date().getFullYear();
 
@@ -5,52 +6,83 @@ const currentYear = new Date().getFullYear();
 document.getElementById("currentyear").textContent = currentYear;
 
 // Get last modified date
-document.getElementById("lastModified").textContent = "Last Modification: " + document.lastModified;
+document.getElementById("lastModified").textContent =
+    "Last Modification: " + document.lastModified;
 
-// FEATURE: Selecionar elementos do DOM
+
+// ===== DOM =====
+// Selecionar elementos do DOM
+const form = document.getElementById("taskForm");
 const taskInput = document.getElementById("taskInput");
-const addTaskBtn = document.getElementById("addTaskBtn");
 const taskList = document.getElementById("taskList");
 
-// FEATURE: Função para criar tarefa
-function createTask(taskText) {
-    const li = document.createElement("li");
 
-    // FEATURE: Texto da tarefa
-    li.textContent = taskText;
+// ===== DATA STRUCTURE =====
+// Array to store tasks
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-    // FEATURE: Botão de deletar
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "X";
+// Render tasks on screen
+function renderTasks() {
+    taskList.innerHTML = "";
 
-    // FEATURE: Marcar como concluída ao clicar no texto
-    li.addEventListener("click", () => {
-        li.classList.toggle("completed");
+    tasks.forEach(task => {
+        const li = document.createElement("li");
+
+        // Template literal
+        li.innerHTML = `
+            <span class="${task.completed ? "completed" : ""}">
+                ${task.text}
+            </span>
+            <button data-id="${task.id}">X</button>
+        `;
+
+        // Toggle completed state
+        li.querySelector("span").addEventListener("click", () => {
+            task.completed = !task.completed;
+            saveTasks();
+        });
+
+        // Delete task using filter
+        li.querySelector("button").addEventListener("click", () => {
+            tasks = tasks.filter(t => t.id !== task.id);
+            saveTasks();
+        });
+
+        taskList.appendChild(li);
     });
-
-    // FEATURE: Deletar tarefa
-    deleteBtn.addEventListener("click", (e) => {
-        e.stopPropagation(); // impede conflito com clique do LI
-        li.remove();
-    });
-
-    li.appendChild(deleteBtn);
-    taskList.appendChild(li);
 }
 
-// FEATURE: Adicionar tarefa ao clicar no botão
-addTaskBtn.addEventListener("click", () => {
+
+// Save tasks to localStorage
+function saveTasks() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    renderTasks();
+}
+
+// Form submission (better than button click)
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
     const taskText = taskInput.value.trim();
 
+    // Conditional branching (required)
     if (taskText !== "") {
-        createTask(taskText);
+
+        // Object (required)
+        const task = {
+            id: Date.now(),
+            text: taskText,
+            completed: false
+        };
+
+        tasks.push(task); // Add to array
+
+        saveTasks();
         taskInput.value = "";
     }
 });
 
-// FEATURE: Permitir adicionar com Enter
-taskInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-        addTaskBtn.click();
-    }
-});
+
+// ===== INIT =====
+// Initial render when page loads
+renderTasks();

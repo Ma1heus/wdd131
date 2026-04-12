@@ -28,10 +28,11 @@
 
     <main>
         <!-- Input to add tasks -->
-        <section class="task-input">
-            <input type="text" id="taskInput" placeholder="Enter a task...">
-            <button id="addTaskBtn">Add</button>
-        </section>
+        <form class="task-input" id="taskForm">
+            <label for="taskInput">New Task:</label>
+            <input type="text" id="taskInput" placeholder="Enter a task..." required>
+            <button type="submit">Add</button>
+        </form>
 
         <!-- Tasks Lists -->
         <section class="task-list">

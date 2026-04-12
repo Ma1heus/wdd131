@@ -1,9 +1,11 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* DESIGN SYSTEM */
 :root {
     --primary-color: #6204BF;
     --secondary-color: #0339A6;
@@ -11,15 +13,14 @@
     --background-color: #F2F2F2;
     --surface-color: #ffffff;
 
-    --text-color: #222222;
-    --text-light: #ffffff;
+    --text-color: #222;
+    --text-light: #fff;
 
     --completed-opacity: 0.6;
 
     --main-font-family: 'Montserrat', sans-serif;
 
-    --padding-small: 10px;
-    --padding-medium: 1rem;
+    --radius: 8px;
 }
 
 /* BODY */
@@ -41,7 +42,7 @@ header {
 
     width: 100%;
     text-align: center;
-    padding: var(--padding-medium);
+    padding: 1rem;
 }
 
 /* MAIN */
@@ -55,13 +56,22 @@ main {
 /* TASK INPUT */
 .task-input {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
 }
 
+.task-input label{
+    font-size: 2vh;
+    font-family: var(--main-font-family);
+}
+
+/* Input field */
 #taskInput {
     flex: 1;
-    padding: var(--padding-small);
+    padding: 15px;
+    border-radius: var(--radius);
     border: 1px solid #ccc;
 }
 
@@ -71,7 +81,8 @@ button {
     color: var(--text-light);
 
     border: none;
-    padding: var(--padding-small);
+    padding: 15px;
+    border-radius: var(--radius);
     cursor: pointer;
 }
 
@@ -80,18 +91,19 @@ button {
     list-style: none;
 }
 
+/* Each task item */
 .task-list li {
     background: var(--surface-color);
-
-    padding: var(--padding-small);
+    padding: 10px;
     margin-bottom: 10px;
+    border-radius: var(--radius);
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* COMPLETED TASK */
+/* Finished task */
 .completed {
     text-decoration: line-through;
     opacity: var(--completed-opacity);
@@ -99,16 +111,11 @@ button {
 
 /* FOOTER */
 footer {
-    padding: var(--padding-medium) 0;
+    padding: 1rem 0;
     width: 100%;
     margin-top: 1.5rem;
 
     text-align: center;
     color: var(--text-light);
     background-color: var(--primary-color);
-}
-
-footer p {
-    font-size: 18px;
-    margin: 10px;
 }
